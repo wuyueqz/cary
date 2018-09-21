@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization"></script>
+<script src="crime_2018.json" ></script>
+
+<div id="map-canvas" style="height:600px;width:800px"></div>
+
+<script type="text/javascript">
+
+function point(crime){
+    var point = {};
+    
+    point.latitude = crime.lat;
+    point.longitude = crime.lon;
+    
+    return point;
+}
+
+var points = cary.map(point);
+
+</script>
+<script src="heatmap.js"></script>
+</html>
